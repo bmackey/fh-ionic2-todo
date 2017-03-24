@@ -1,0 +1,42 @@
+.ios, .md {
+ 
+  page-intro {
+
+  	.toolbar-background {
+  		background: none !important;
+  		border: none !important;
+  	}
+
+  	.toolbar-title {
+  		color: #fff;
+  	}
+
+  	.bar-button {
+  		color: #fff;
+  	}
+ 
+    ion-slide img {
+      width: 90% !important;
+    }
+
+    #rhlogo {
+      width: 85px !important;
+    }
+
+    .header-fh {
+    	width: 45%;
+    	margin: 5px;
+    }
+
+    .slide-text{
+      color: #fff;
+
+      p {
+        font-size: small;
+        margin: 10px;
+      }
+    }
+ 
+  }
+ 
+}

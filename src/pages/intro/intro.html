@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-toolbar>
+        <img class="header-fh" src="assets/images/header-fh.png" />
+        <ion-buttons end>
+            <button ion-button (click)="goToHome()">
+                SKIP
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-slides pager>
+    <ion-slide style="background-color: #4b4d4f">
+        <img src="assets/images/onboarding-1.png" />
+        <div class="slide-text">
+            <h2>Welcome to FeedHenry
+        </h2>
+            <p>cloud-based enterprise mobile application platform that enables users to design, develop, deploy and manage applications for mobile devices
+            </p>
+        </div>
+    </ion-slide>
+    <ion-slide style="background-color: #94c353">
+        <img src="assets/images/onboarding-2.png" />
+        <div class="slide-text">
+            <h2>FeedHenry Raincatcher
+        </h2>
+            <p>a set of Niode.js modules that can be used with FeedHenry to develop workforce management (WFM) applications
+            </p>
+        </div>
+    </ion-slide>
+    <ion-slide style="background-color: #2fadbf">
+        <ion-row>
+            <ion-col>
+                <img src="assets/images/onboarding-3.png" />
+            </ion-col>
+            <div class="slide-text">
+                <h2>Accelerate Mobile App Development
+        </h2>
+                <p>an <b>open-source</b> mobiel application platform that is simple, sercure and scalable. Project sponsered by:
+                </p>
+                <img id="rhlogo" src="assets/images/redhat-white.png" />
+            </div>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <button ion-button color="light" (click)="goToHome()">Start Using My App</button>
+            </ion-col>
+        </ion-row>
+    </ion-slide>
+</ion-slides>
