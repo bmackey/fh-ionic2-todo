@@ -32,6 +32,7 @@
     </ion-segment>
     <ion-searchbar showWhen="ios" (ionInput)="getItems($event)"></ion-searchbar>
 </ion-header>
+
 <ion-content>
     <div [ngSwitch]="todo">
         <ion-list *ngSwitchCase="'scheduled'">
@@ -55,4 +56,9 @@
             </button>
         </ion-list>
     </div>
+    <ion-fab right bottom showWhen="android">
+    <button ion-fab color="danger">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-content>

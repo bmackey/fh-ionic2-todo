@@ -1,18 +1,129 @@
 <ion-header>
-  <ion-navbar>
-    <button menuToggle *ngIf="!selectedItem">
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>ToDo Item</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <button menuToggle *ngIf="!selectedItem">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title showWhen="ios">ToDo</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only color="royal">
+                Save
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
-
-<ion-content>
-  <h3 text-center *ngIf="selectedItem">
+<!-- ios content layout -->
+<ion-content padding showWhen="ios">
+    <br>
+    <h1 *ngIf="selectedItem">
+    <b>{{selectedItem.title}}</b>
+  </h1>
+    <hr>
+    <h4 *ngIf="selectedItem">
+    Description for item # <b>{{selectedItem.title}}</b>
+  </h4>
+    <br>
+    <ion-list>
+        <ion-list-header>
+            TODO SCHEDULE
+        </ion-list-header>
+        <ion-item>
+            <ion-label>All Day</ion-label>
+            <ion-toggle checked="false" [(ngModel)]="event.allDay">></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label>Date</ion-label>
+            <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.date"></ion-datetime>
+        </ion-item>
+        <ion-item *ngIf="!event.allDay">
+            <ion-label>Start</ion-label>
+            <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+        </ion-item>
+        <ion-item *ngIf="!event.allDay">
+            <ion-label>End</ion-label>
+            <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeEnds"></ion-datetime>
+        </ion-item>
+    </ion-list>
+    <br>
+    <ion-list>
+        <ion-item>
+            <ion-label>Notify Me</ion-label>
+            <ion-icon name="alarm" item-left></ion-icon>
+            <ion-select [(ngModel)]="reminder">
+                <ion-option value="0">no reminder</ion-option>
+                <ion-option value="5">5 minutes</ion-option>
+                <ion-option value="10">10 minutes</ion-option>
+                <ion-option value="15">15 minutes</ion-option>
+                <ion-option value="20">20 minutes</ion-option>
+                <ion-option value="25">25 minutes</ion-option>
+                <ion-option value="30">30 minutes</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item>
+            <ion-icon name='locate' item-left></ion-icon>
+            Location
+            <ion-note item-right>
+                Add Location
+            </ion-note>
+        </ion-item>
+    </ion-list>
+     <ion-list>
+             <ion-list-header>
+            ADD TODO IMAGE
+        </ion-list-header>
+        <ion-item>
+            <ion-icon name='camera' item-left></ion-icon>
+            Add Image
+            <ion-note item-right>
+                Add Image
+            </ion-note>
+        </ion-item>
+    </ion-list>
+         <ion-list>
+             <ion-list-header>
+            ADD TODO PARTICIPANTS
+        </ion-list-header>
+        <ion-item>
+            <ion-icon name='contacts' item-left></ion-icon>
+            Share ToDo with
+            <ion-note item-right>
+                Participants
+            </ion-note>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<!-- android layout -->
+<ion-content padding showWhen="android">
+    <h3 *ngIf="selectedItem">
     {{selectedItem.title}}
-    <ion-icon [name]="selectedItem.icon"></ion-icon>
   </h3>
-  <h4 text-center *ngIf="selectedItem">
+    <h4 *ngIf="selectedItem">
     You navigated here from <b>{{selectedItem.title}}</b>
   </h4>
 </ion-content>
+<!-- Footer with icons only applicable on android -->
+<ion-footer showWhen="android">
+    <ion-toolbar>
+        <ion-buttons>
+            <button ion-button color="primary">
+                <ion-icon name="calendar"></ion-icon>
+            </button>
+            <button ion-button color="primary">
+                <ion-icon name="list"></ion-icon>
+            </button>
+            <button ion-button color="primary">
+                <ion-icon name="alarm"></ion-icon>
+            </button>
+            <button ion-button color="primary">
+                <ion-icon name="navigate"></ion-icon>
+            </button>
+            <button ion-button color="primary">
+                <ion-icon name="camera"></ion-icon>
+            </button>
+            <button ion-button color="primary">
+                <ion-icon name="contacts"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>

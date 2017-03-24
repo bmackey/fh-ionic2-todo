@@ -1,3 +1,55 @@
 page-item-details {
 
+	h1 {
+		color: #fff;
+		font-size: 30pt;	
+	}
+
+	h2, h3, h4, p {
+		color: #fff;
+	}
+
+	.content-ios hr {
+		background-color: #fff;
+	}
+
+	.toolbar-background-ios {
+		background: #268a99;
+	}
+
+	.toolbar-background-md {
+		background: #2fadbf;
+	}
+
+	.header-md::after {
+		background-image: none !important;
+	}
+
+	.content-md, .content-ios {
+		background: #2fadbf;
+	}
+
+	.bar-buttons-md {
+		text-align: center;
+	}
+
+	.bar-button-md-primary {
+		width: 13%;
+
+		ion-icon {
+			font-size: 1.5em;
+		}
+	}
+
+	.item-ios {
+		background-color: #268a99;
+		color: #fff;
+		margin: 0 -16px 0 -16px;
+		width: 109%;
+
+	}
+
+	.list-header-ios {
+		background-color: #2fadbf;
+	}
 }
