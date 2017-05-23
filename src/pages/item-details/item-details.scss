@@ -49,6 +49,15 @@ page-item-details {
 
 	}
 
+	.item-md {
+		background-color: rgba(255, 255, 255, 0);
+		color: #fff;
+	}
+
+	.list-md .item-block .item-inner {
+		border-bottom: none !important;
+	}
+
 	.list-header-ios {
 		background-color: #2fadbf;
 	}

@@ -1,0 +1,16 @@
+import { Todo } from './todo';
+
+export const TODOS: Todo[] = [
+    { id: 1, title: 'Go to butchers', created: new Date(), description: 'Testing....', scheduled: new Date(), allDay: true, start: null, end: null, setReminder: false, reminder: null, location: 'null', image: 'null', participants: 'null', completed: false, completedOn: null},
+    { id: 2, title: 'Shopping', created: new Date(), description: 'Testing....', scheduled: new Date(), allDay: true, start: null, end: null, setReminder: false, reminder: null, location: 'null', image: 'null', participants: 'null', completed: false, completedOn: null},
+    { id: 3, title: 'Car Insurance', created: new Date(), description: 'Testing....', scheduled: new Date(), allDay: true, start: null, end: null, setReminder: false, reminder: null, location: 'null', image: 'null', participants: 'null', completed: false, completedOn: null},
+    { id: 4, title: 'Go to get Haircut', created: new Date(), description: 'Testing....', scheduled: new Date(), allDay: true, start: null, end: null, setReminder: false, reminder: null, location: 'null', image: 'null', participants: 'null', completed: false, completedOn: null},
+    { id: 5, title: 'Meet the lads', created: new Date(), description: 'Testing....', scheduled: new Date(), allDay: true, start: null, end: null, setReminder: false, reminder: null, location: 'null', image: 'null', participants: 'null', completed: false, completedOn: null},
+    { id: 6, title: 'Pick up yung lad', created: new Date(), description: 'Testing....', scheduled: new Date(), allDay: true, start: null, end: null, setReminder: false, reminder: null, location: 'null', image: 'null', participants: 'null', completed: false, completedOn: null},
+    { id: 7, title: 'Read a book', created: new Date(), description: 'Testing....', scheduled: new Date(), allDay: true, start: null, end: null, setReminder: false, reminder: null, location: 'null', image: 'null', participants: 'null', completed: false, completedOn: null},
+    { id: 8, title: 'Have a beer', created: new Date(), description: 'Testing....', scheduled: new Date(), allDay: true, start: null, end: null, setReminder: false, reminder: null, location: 'null', image: 'null', participants: 'null', completed: false, completedOn: null},
+    { id: 9, title: 'Walk the dog', created: new Date(), description: 'Testing....', scheduled: new Date(), allDay: true, start: null, end: null, setReminder: false, reminder: null, location: 'null', image: 'null', participants: 'null', completed: false, completedOn: null},
+    { id: 10, title: 'Ring mother', created: new Date(), description: 'Testing....', scheduled: new Date(), allDay: true, start: null, end: null, setReminder: false, reminder: null, location: 'null', image: 'null', participants: 'null', completed: false, completedOn: null}
+];
+
+// created: new Date(), description: 'Testing....', scheduled: new Date(), allDay: true, start: null, end: null, setReminder: false, reminder: null, location: 'null', image: 'null', participants: 'null', completed: false, completedOn: null
